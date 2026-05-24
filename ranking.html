@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranking — SoulUp</title>
+  <meta name="description" content="Acompanhe o ranking SoulUp em tempo real: classificação semanal, mensal e geral dos usuários mais sustentáveis." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variaveis.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/pages/ranking.css" />
+  <link rel="stylesheet" href="css/responsividade.css" />
+</head>
+<body>
+
+  <header class="cabecalhoSite">
+    <nav class="navegacao conteiner" aria-label="Navegação principal">
+      <a href="index.html" class="marca"><img src="assets/logo.svg" alt="SoulUp" class="marcaImagem" /><span class="marcaDivisor" aria-hidden="true"></span><img src="assets/logo-nextcode.png" alt="NextCode" class="marcaImagem marcaImagemNextcode" /></a>
+      <button class="navegacaoBotao" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="navegacaoLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="plataforma.html">Plataforma</a></li>
+        <li><a href="validar.html">Validar Ação</a></li>
+        <li><a href="ranking.html" class="ativo">Ranking</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="conteiner">
+        <div class="secaoTitulo">
+          <h1>Ranking SoulUp</h1>
+          <p>Os usuários mais engajados da comunidade. O líder mensal ganha conta de energia subsidiada pelos parceiros.</p>
+        </div>
+
+        <div class="abas" role="tablist" aria-label="Filtrar período">
+          <button class="abaBotao estaAtivo" data-period="semanal" role="tab">Semanal</button>
+          <button class="abaBotao" data-period="mensal" role="tab">Mensal</button>
+          <button class="abaBotao" data-period="geral" role="tab">Geral</button>
+        </div>
+
+        <div class="formularioGrupo" style="max-width:360px; margin-bottom:1.5rem;">
+          <label for="ranking-search"><i data-icon="search"></i> Buscar usuário</label>
+          <input type="text" id="ranking-search" placeholder="Digite um nome…" />
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table class="rankingTabela">
+            <thead>
+              <tr>
+                <th>Pos.</th>
+                <th>Usuário</th>
+                <th>Cidade</th>
+                <th>Pontos</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-tbody"></tbody>
+          </table>
+        </div>
+
+        <p class="textoCentro margemTopoMd" style="color:var(--color-text-muted); font-size:0.9rem;">
+          Dados ilustrativos para demonstração.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodapeSite">
+    <div class="conteiner">
+      <div class="rodapeGrid">
+        <div><img src="assets/logo-white.svg" alt="SoulUp" class="marcaImagem" /><p style="margin-top:0.75rem;">Gamificação sustentável que conecta atitudes ecológicas a recompensas reais.</p></div>
+        <div><h4>Páginas</h4><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="plataforma.html">Plataforma</a></li>
+        <li><a href="validar.html">Validar Ação</a></li><li><a href="ranking.html">Ranking</a></li></ul></div>
+        <div><h4>Equipe</h4><ul><li><a href="integrantes.html">Integrantes</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      </div>
+      <div class="rodapeBase">© <span id="current-year"></span> Challenge SoulUp · NextCode · Turma 1TDSPO</div>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ranking.js"></script>
+</body>
+</html>
