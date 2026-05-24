@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato — SoulUp</title>
+    <meta
+      name="description"
+      content="Fale com a equipe SoulUp: envie sua mensagem, dúvida ou proposta de parceria."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variaveis.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/pages/contato.css" />
+    <link rel="stylesheet" href="css/responsividade.css" />
+  </head>
+  <body>
+    <header class="cabecalhoSite">
+      <nav class="navegacao conteiner" aria-label="Navegação principal">
+        <a href="index.html" class="marca"><img src="assets/logo.svg" alt="SoulUp" class="marcaImagem" /><span class="marcaDivisor" aria-hidden="true"></span><img src="assets/logo-nextcode.png" alt="NextCode" class="marcaImagem marcaImagemNextcode" /></a>
+        <button
+          class="navegacaoBotao"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navegacaoLinks">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="plataforma.html">Plataforma</a></li>
+          <li><a href="validar.html">Validar Ação</a></li>
+          <li><a href="ranking.html">Ranking</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html" class="ativo">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="conteiner">
+          <div class="secaoTitulo">
+            <h1>Fale com a equipe</h1>
+            <p>
+              Dúvidas, sugestões, parcerias ou imprensa — responderemos em até
+              48h úteis.
+            </p>
+          </div>
+
+          <div class="contatoGrid">
+            <aside class="contatoInfo">
+              <h3>Informações</h3>
+              <p>
+                Nosso time está espalhado por São Paulo, mas conectado pela
+                mesma missão: tornar a sustentabilidade um hábito divertido.
+              </p>
+              <ul>
+                <li>
+                  <span><i data-icon="pin"></i></span
+                  ><span>FIAP — Av. Paulista, 1106 — SP</span>
+                </li>
+                <li>
+                  <span><i data-icon="school"></i></span
+                  ><span>Turma 1TDSPO</span>
+                </li>
+              </ul>
+            </aside>
+
+            <form id="contact-form" class="formulario" novalidate>
+              <div class="formularioGrupo">
+                <label for="name">Nome completo *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Como devemos te chamar?"
+                />
+                <span class="mensagemErro"></span>
+              </div>
+
+              <div class="formularioGrupo">
+                <label for="email">E-mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                />
+                <span class="mensagemErro"></span>
+              </div>
+
+              <div class="formularioGrupo">
+                <label for="subject">Assunto *</label>
+                <select id="subject" name="subject">
+                  <option value="">Selecione…</option>
+                  <option value="duvida">Dúvida sobre a plataforma</option>
+                  <option value="parceria">Proposta de parceria</option>
+                  <option value="imprensa">Imprensa</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="mensagemErro"></span>
+              </div>
+
+              <div class="formularioGrupo">
+                <label for="message">Mensagem *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Escreva sua mensagem (mín. 10 caracteres)…"
+                ></textarea>
+                <span class="mensagemErro"></span>
+              </div>
+
+              <button type="submit" class="botao botaoPrimario botaoBloco">
+                Enviar mensagem
+              </button>
+
+              <div
+                id="form-feedback"
+                class="formularioRetorno"
+                role="status"
+                aria-live="polite"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodapeSite">
+      <div class="conteiner">
+        <div class="rodapeGrid">
+          <div>
+            <img src="assets/logo-white.svg" alt="SoulUp" class="marcaImagem" />
+            <p style="margin-top: 0.75rem">
+              Gamificação sustentável que conecta atitudes ecológicas a
+              recompensas reais.
+            </p>
+          </div>
+          <div>
+            <h4>Páginas</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="plataforma.html">Plataforma</a></li>
+              <li><a href="validar.html">Validar Ação</a></li>
+              <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Equipe</h4>
+            <ul>
+              <li><a href="integrantes.html">Integrantes</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rodapeBase">
+          © <span id="current-year"></span> Challenge SoulUp · NextCode · Turma
+          1TDSPO
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/icons.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contato.js"></script>
+  </body>
+</html>
