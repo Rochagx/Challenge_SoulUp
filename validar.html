@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validar Ação — SoulUp</title>
+  <meta name="description" content="Como funciona a validação de ações sustentáveis na plataforma SoulUp." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variaveis.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/pages/validar.css" />
+  <link rel="stylesheet" href="css/responsividade.css" />
+</head>
+<body>
+
+  <header class="cabecalhoSite">
+    <nav class="navegacao conteiner" aria-label="Navegação principal">
+      <a href="index.html" class="marca"><img src="assets/logo.svg" alt="SoulUp" class="marcaImagem" /><span class="marcaDivisor" aria-hidden="true"></span><img src="assets/logo-nextcode.png" alt="NextCode" class="marcaImagem marcaImagemNextcode" /></a>
+      <button class="navegacaoBotao" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="navegacaoLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="plataforma.html">Plataforma</a></li>
+        <li><a href="validar.html" class="ativo">Validar Ação</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="conteiner">
+        <div class="secaoTitulo validarIntro">
+          <span class="sobrancelha">Como validar uma ação</span>
+          <h1>Registre sua ação sustentável</h1>
+          <p>Preencha o formulário com os dados da ação. O Bot SoulUp valida a evidência automaticamente e atualiza sua pontuação no ranking.</p>
+        </div>
+
+        <div class="validarLayout">
+          <form class="validarFormulario formulario" onsubmit="event.preventDefault();">
+            <h2>Formulário de envio</h2>
+
+            <div class="formularioGrupo">
+              <label for="tipoAcao">Tipo de ação</label>
+              <select id="tipoAcao" name="tipoAcao">
+                <option value="reciclagem">Reciclagem</option>
+                <option value="transporte">Transporte limpo</option>
+                <option value="agua">Economia de água</option>
+                <option value="energia">Energia consciente</option>
+                <option value="plantio">Plantio</option>
+                <option value="consumo">Consumo consciente</option>
+              </select>
+            </div>
+
+            <div class="formularioGrupo">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" name="descricao" placeholder="Conte rapidamente o que você fez."></textarea>
+            </div>
+
+            <div class="formularioGrupo">
+              <label for="evidencia">Evidência (foto)</label>
+              <input type="file" id="evidencia" name="evidencia" accept="image/*" />
+            </div>
+
+            <button type="submit" class="botao botaoPrimario botaoBloco">Enviar para validação</button>
+          </form>
+
+          <aside class="validarLateral" aria-label="Pesos das ações">
+            <h3>Peso das ações (0–100)</h3>
+            <ul>
+              <li><strong>Reciclagem</strong> 10–25 pts por envio</li>
+              <li><strong>Transporte limpo</strong> 15–30 pts</li>
+              <li><strong>Economia de água</strong> 10–20 pts</li>
+              <li><strong>Energia consciente</strong> 15–25 pts</li>
+              <li><strong>Plantio</strong> 30–60 pts</li>
+              <li><strong>Consumo consciente</strong> 5–15 pts</li>
+            </ul>
+            <p style="margin-top:0.75rem; font-size:0.8rem; color:var(--color-text-muted);">
+              Pontuações finais variam conforme análise do Bot SoulUp.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: var(--color-surface);">
+      <div class="conteiner validarPassos">
+        <div class="secaoTitulo">
+          <span class="sobrancelha">Como o Bot SoulUp valida</span>
+          <h2>4 etapas — tudo automático em produção.</h2>
+        </div>
+        <div class="cartoesGrid">
+          <article class="cartao"><span class="passoNumero">01</span><div class="cartaoIcone"><i data-icon="upload"></i></div><h3>Upload</h3><p>Usuário envia foto ou vídeo da ação realizada.</p></article>
+          <article class="cartao"><span class="passoNumero">02</span><div class="cartaoIcone"><i data-icon="robot"></i></div><h3>Análise</h3><p>O Bot identifica o tipo de ação e seu impacto.</p></article>
+          <article class="cartao"><span class="passoNumero">03</span><div class="cartaoIcone"><i data-icon="check"></i></div><h3>Validação</h3><p>Ação aprovada gera pontos conforme o peso ambiental.</p></article>
+          <article class="cartao"><span class="passoNumero">04</span><div class="cartaoIcone"><i data-icon="trophy"></i></div><h3>Ranking</h3><p>Sua posição na comunidade é atualizada instantaneamente.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodapeSite">
+    <div class="conteiner">
+      <div class="rodapeGrid">
+        <div><img src="assets/logo-white.svg" alt="SoulUp" class="marcaImagem" /><p style="margin-top:0.75rem;">Gamificação sustentável que conecta atitudes ecológicas a recompensas reais.</p></div>
+        <div><h4>Plataforma</h4><ul><li><a href="plataforma.html">Simulador</a></li><li><a href="validar.html">Validar Ação</a></li><li><a href="ranking.html">Ranking</a></li></ul></div>
+        <div><h4>Equipe</h4><ul><li><a href="integrantes.html">Integrantes</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      </div>
+      <div class="rodapeBase">© <span id="current-year"></span> Challenge SoulUp · NextCode · Turma 1TDSPO</div>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
