@@ -1,0 +1,90 @@
+
+
+/* ---------- RANKING ---------- */
+.abas {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--space-md);
+  overflow-x: auto;
+}
+.abaBotao {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.abaBotao:hover {
+  color: var(--color-deep);
+}
+.abaBotao.estaAtivo {
+  color: var(--color-teal);
+  border-bottom-color: var(--color-teal);
+}
+.abaPainel {
+  display: none;
+}
+.abaPainel.estaAtivo {
+  display: block;
+}
+.rankingTabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.rankingTabela th,
+.rankingTabela td {
+  padding: var(--space-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+.rankingTabela th {
+  background: var(--color-deep);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.rankingTabela tr:last-child td {
+  border-bottom: none;
+}
+.rankingTabela tbody tr {
+  transition: background 0.2s ease;
+}
+.rankingTabela tbody tr:hover {
+  background: var(--color-bg);
+}
+.rankingPosicao {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 50px;
+  color: var(--color-teal);
+}
+.rankingPosicao.ouro {
+  color: #d4a017;
+}
+.rankingPosicao.prata {
+  color: #95a5a6;
+}
+.rankingPosicao.bronze {
+  color: #cd7f32;
+}
+.rankingPontuacao {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-deep);
+}
+
