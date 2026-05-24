@@ -1,0 +1,121 @@
+
+/* ---------- FORMULÁRIO CONTATO ---------- */
+.contatoGrid,
+.simulador,
+.vitrine,
+.problemaSolucao {
+  display: grid;
+  gap: var(--space-lg);
+}
+.contatoGrid {
+  grid-template-columns: 1fr 1.5fr;
+  align-items: start;
+}
+.contatoInfo {
+  background: linear-gradient(135deg, var(--color-ocean), var(--color-deep));
+  color: white;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+}
+.contatoInfo h3,
+.contatoInfo p {
+  color: white;
+}
+.contatoInfo p {
+  opacity: 0.9;
+  margin-bottom: var(--space-md);
+}
+.contatoInfo ul {
+  list-style: none;
+}
+.contatoInfo li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.contatoInfo li span:first-child {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.formulario {
+  background: var(--color-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+.formularioGrupo {
+  margin-bottom: var(--space-sm);
+}
+.formularioGrupo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--color-deep);
+}
+.formularioGrupo input,
+.formularioGrupo textarea,
+.formularioGrupo select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.formularioGrupo input:focus,
+.formularioGrupo textarea:focus,
+.formularioGrupo select:focus {
+  outline: none;
+  border-color: var(--color-teal);
+  background: white;
+}
+.formularioGrupo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.formularioGrupo.temErro input,
+.formularioGrupo.temErro textarea,
+.formularioGrupo.temErro select {
+  border-color: var(--color-error);
+}
+.mensagemErro {
+  display: none;
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.formularioGrupo.temErro .mensagemErro {
+  display: block;
+}
+.formularioRetorno {
+  margin-top: var(--space-sm);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: none;
+}
+.formularioRetorno.estaSucesso {
+  display: block;
+  background: rgba(46, 138, 95, 0.12);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+.formularioRetorno.estaErro {
+  display: block;
+  background: rgba(192, 57, 43, 0.1);
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+}
+
