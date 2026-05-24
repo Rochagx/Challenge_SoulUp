@@ -1,11 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoulUp — Gamificação que recompensa atitudes sustentáveis</title>
+  <meta name="description" content="A primeira rede social de impacto sustentável do planeta. Transforme ações ecológicas em pontos, ranking e recompensas reais." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variaveis.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/pages/inicio.css" />
+  <link rel="stylesheet" href="css/responsividade.css" />
 </head>
 <body>
-    
+
+  <header class="cabecalhoSite">
+    <nav class="navegacao conteiner" aria-label="Navegação principal">
+      <a href="index.html" class="marca"><img src="assets/logo.svg" alt="SoulUp" class="marcaImagem" /><span class="marcaDivisor" aria-hidden="true"></span><img src="assets/logo-nextcode.png" alt="NextCode" class="marcaImagem marcaImagemNextcode" /></a>
+      <button class="navegacaoBotao" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="navegacaoLinks">
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="plataforma.html">Plataforma</a></li>
+        <li><a href="validar.html">Validar Ação</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="destaqueV2">
+      <div class="conteiner destaqueGrid">
+        <div>
+          <span class="sobrancelha noEscuro">A rede social do planeta</span>
+          <h1>A primeira rede social de impacto sustentável.</h1>
+          <p class="destaqueTexto">
+            Transforme suas atitudes ecológicas em pontos, recompensas reais e
+            impacto coletivo. Uma plataforma onde cada gesto verde conta — validado,
+            ranqueado e recompensado.
+          </p>
+          <div class="destaqueAcoes">
+            <a class="botao botaoPrimario" href="validar.html">Validar minha ação</a>
+            <a class="botao botaoSecundario" href="plataforma.html">Conhecer a plataforma</a>
+          </div>
+        </div>
+        <div class="destaqueFoto">
+          <img src="assets/soulup-gamificacao-sustentavel-dashboard.jpg" alt="Interface da plataforma SoulUp com ranking sustentável e sistema de gamificação ecológica" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="conteiner">
+        <div class="secaoTitulo" data-animate>
+          <span class="sobrancelha">O problema</span>
+          <h2>Sustentabilidade não pode ser invisível.</h2>
+          <p>Pessoas fazem ações ecológicas todos os dias, mas raramente são reconhecidas ou recompensadas. Sem incentivo, o engajamento cai e o impacto se dilui.</p>
+        </div>
+        <div class="problemaSolucao">
+          <article class="cartao problema" data-animate>
+            <div class="cartaoIcone"><i data-icon="alert"></i></div>
+            <h3>Sem visibilidade nem dado</h3>
+            <p>Comunidades não enxergam o impacto coletivo das suas atitudes — não há medição, comparação ou recompensa pelo que é feito.</p>
+          </article>
+          <article class="cartao" data-animate>
+            <div class="cartaoIcone"><i data-icon="sparkle"></i></div>
+            <h3>SoulUp transforma ação em valor</h3>
+            <p>Cada gesto sustentável é validado, pontuado de 0 a 100 e convertido em ranking e recompensas reais — incluindo conta de energia subsidiada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: var(--color-surface);">
+      <div class="conteiner">
+        <div class="vitrine">
+          <div>
+            <span class="sobrancelha">A plataforma</span>
+            <h2>Transforme seu tempo em propósito.</h2>
+            <p style="margin: 1rem 0 1.5rem;">
+              Um ecossistema que conecta validação, recompensa e identidade verde
+              num só lugar. Envie uma foto da sua ação, deixe o sistema validar e
+              veja seu impacto crescer no ranking ao vivo.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.75rem;">
+              <li style="display: flex; gap: 0.6rem; align-items: center;"><i data-icon="check" style="color: var(--color-teal);"></i> Validação automática e justa</li>
+              <li style="display: flex; gap: 0.6rem; align-items: center;"><i data-icon="check" style="color: var(--color-teal);"></i> Ranking em tempo real</li>
+              <li style="display: flex; gap: 0.6rem; align-items: center;"><i data-icon="check" style="color: var(--color-teal);"></i> Recompensas reais por engajamento</li>
+            </ul>
+            <a class="botao botaoPrimario" href="plataforma.html">Testar simulador</a>
+          </div>
+          <div class="vitrineImagem">
+            <img src="assets/soulup-transforme-seu-tempo-em-proposito.jpg" alt="App SoulUp em uso" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secaoEnvolveLima">
+      <div class="conteiner">
+        <div class="secaoLima">
+          <div style="max-width: 720px; margin: 0 auto var(--space-lg); text-align: center;">
+            <span class="sobrancelha">Impacto coletivo · dados reais</span>
+            <h2>Pontos que valem energia, propósito e transformação.</h2>
+          </div>
+          <div class="estatisticasGrid">
+            <div class="estatisticaCartao">
+              <div class="estatisticaIcone"><i data-icon="leaf"></i></div>
+              <div class="estatisticaNumero">9.599</div>
+              <h4>Usuários ativos</h4>
+              <p>Engajados no app no período</p>
+            </div>
+            <div class="estatisticaCartao">
+              <div class="estatisticaIcone"><i data-icon="sparkle"></i></div>
+              <div class="estatisticaNumero">2.875</div>
+              <h4>Novos usuários</h4>
+              <p>Entraram na rede em 2026</p>
+            </div>
+            <div class="estatisticaCartao alternativo">
+              <div class="estatisticaIcone"><i data-icon="bolt"></i></div>
+              <div class="estatisticaNumero">183k</div>
+              <h4>Eventos registrados</h4>
+              <p>Interações na plataforma</p>
+            </div>
+            <div class="estatisticaCartao alternativo">
+              <div class="estatisticaIcone"><i data-icon="target"></i></div>
+              <div class="estatisticaNumero">15.572</div>
+              <h4>Sessões</h4>
+              <p>Tempo médio 11min por sessão</p>
+            </div>
+          </div>
+
+          <div class="fluxoUsuarios" data-animate>
+            <div class="fluxoCabecalho">
+              <h3>Fluxo de usuários ativos · app real SoulUp</h3>
+            </div>
+            <div class="fluxoBarras" role="img" aria-label="Gráfico de usuários ativos por mês">
+              <div class="fluxoBarra" style="height: 70.2%;"><span class="fluxoValor">2.624</span></div>
+              <div class="fluxoBarra" style="height: 67.3%;"><span class="fluxoValor">2.517</span></div>
+              <div class="fluxoBarra" style="height: 100%;"><span class="fluxoValor">3.738</span></div>
+              <div class="fluxoBarra" style="height: 19.3%;"><span class="fluxoValor">720</span></div>
+            </div>
+            <div class="fluxoLabels">
+              <span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span>
+            </div>
+            <div class="fluxoRodape">
+              <span>Total de usuários: <strong>61.242</strong></span>
+              <span>Tempo médio/sessão: <strong>11:06:32</strong></span>
+              <span>Pico em março: <strong>3.738 ativos</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, var(--color-teal), var(--color-ocean)); color: white; border-radius: 0;">
+      <div class="conteiner textoCentro">
+        <h2 style="color:white;">Quer fazer parte dessa mudança real?</h2>
+        <p style="color: rgba(255,255,255,0.9); max-width: 560px; margin: 1rem auto 1.5rem;">
+          Comece agora simulando uma ação sustentável e veja como funciona a validação automática da SoulUp.
+        </p>
+        <a class="botao botaoPrimario" href="validar.html">Validar minha primeira ação</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodapeSite">
+    <div class="conteiner">
+      <div class="rodapeGrid">
+        <div>
+          <img src="assets/logo-white.svg" alt="SoulUp" class="marcaImagem" />
+          <p style="margin-top:0.75rem;">A primeira rede social de impacto sustentável do planeta. Atitudes verdes valem pontos, ranking e recompensas reais.</p>
+        </div>
+        <div>
+          <h4>Plataforma</h4>
+          <ul>
+            <li><a href="plataforma.html">Simulador</a></li>
+            <li><a href="validar.html">Validar Ação</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Equipe</h4>
+          <ul>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodapeBase">
+        <div class="rodapeBase">© <span id="current-year"></span> Challenge SoulUp · NextCode · Turma 1TDSPO</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
