@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma — Simulador SoulUp</title>
+  <meta name="description" content="Teste o simulador SoulUp: selecione ações sustentáveis e veja sua pontuação evoluir em tempo real." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variaveis.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/pages/plataforma.css" />
+  <link rel="stylesheet" href="css/responsividade.css" />
+</head>
+<body>
+
+  <header class="cabecalhoSite">
+    <nav class="navegacao conteiner" aria-label="Navegação principal">
+      <a href="index.html" class="marca"><img src="assets/logo.svg" alt="SoulUp" class="marcaImagem" /><span class="marcaDivisor" aria-hidden="true"></span><img src="assets/logo-nextcode.png" alt="NextCode" class="marcaImagem marcaImagemNextcode" /></a>
+      <button class="navegacaoBotao" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="navegacaoLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="plataforma.html" class="ativo">Plataforma</a></li>
+        <li><a href="validar.html">Validar Ação</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="conteiner">
+        <div class="secaoTitulo">
+          <h1>Simulador de pontuação</h1>
+          <p>Selecione as ações sustentáveis que você praticou esta semana e veja como a plataforma SoulUp calcula sua pontuação de 0 a 100.</p>
+        </div>
+
+        <div class="simulador">
+
+          <div>
+            <h3 style="margin-bottom:1rem;">Ações disponíveis</h3>
+            <div class="acoesLista">
+
+              <div class="acaoItem" data-points="15">
+                <div class="acaoInfo">
+                  <h4><i data-icon="recycle"></i> Reciclar resíduos</h4>
+                  <p>Separar e destinar corretamente lixo reciclável.</p>
+                </div>
+                <div class="acaoPontos">+15</div>
+              </div>
+
+              <div class="acaoItem" data-points="20">
+                <div class="acaoInfo">
+                  <h4><i data-icon="bike"></i> Transporte limpo</h4>
+                  <p>Usar bicicleta, caminhada ou transporte público.</p>
+                </div>
+                <div class="acaoPontos">+20</div>
+              </div>
+
+              <div class="acaoItem" data-points="12">
+                <div class="acaoInfo">
+                  <h4><i data-icon="droplet"></i> Economia de água</h4>
+                  <p>Reduzir consumo doméstico em pelo menos 10%.</p>
+                </div>
+                <div class="acaoPontos">+12</div>
+              </div>
+
+              <div class="acaoItem" data-points="18">
+                <div class="acaoInfo">
+                  <h4><i data-icon="lightbulb"></i> Energia consciente</h4>
+                  <p>Desligar equipamentos e usar lâmpadas LED.</p>
+                </div>
+                <div class="acaoPontos">+18</div>
+              </div>
+
+              <div class="acaoItem" data-points="10">
+                <div class="acaoInfo">
+                  <h4><i data-icon="salad"></i> Refeição vegetariana</h4>
+                  <p>Substituir refeição animal por vegetal no dia.</p>
+                </div>
+                <div class="acaoPontos">+10</div>
+              </div>
+
+              <div class="acaoItem" data-points="14">
+                <div class="acaoInfo">
+                  <h4><i data-icon="bag"></i> Consumo consciente</h4>
+                  <p>Levar sacola reutilizável e evitar embalagens.</p>
+                </div>
+                <div class="acaoPontos">+14</div>
+              </div>
+
+              <div class="acaoItem" data-points="16">
+                <div class="acaoInfo">
+                  <h4><i data-icon="tree"></i> Plantio / horta</h4>
+                  <p>Plantar uma árvore ou cultivar uma horta caseira.</p>
+                </div>
+                <div class="acaoPontos">+16</div>
+              </div>
+
+            </div>
+            <button id="reset-score" class="botao botaoSecundario margemTopoMd">Limpar seleção</button>
+          </div>
+
+          <aside class="pontuacaoPainel" aria-live="polite">
+            <h3>Sua pontuação</h3>
+            <div class="pontuacaoValor"><span id="score-value">0</span><span style="font-size:1.5rem; opacity:0.6;">/100</span></div>
+            <div class="pontuacaoBarra"><div class="pontuacaoPreenchimento" id="score-fill"></div></div>
+            <div class="pontuacaoNivel" id="score-tier">Inativo</div>
+            <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; margin-top:1rem;">
+              Clique nas ações ao lado para simular sua semana.
+            </p>
+            <button class="botao botaoPrimario margemTopoMd" data-modal-open="rewards-modal" style="margin-top:1.5rem;">Ver recompensas</button>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="background:white;">
+      <div class="conteiner">
+        <div class="secaoTitulo">
+          <h2>Como o cálculo funciona</h2>
+          <p>Os algoritmos da SoulUp consideram três fatores para gerar a pontuação final.</p>
+        </div>
+        <div class="cartoesGrid">
+          <article class="cartao" data-animate>
+            <div class="cartaoIcone"><i data-icon="balance"></i></div>
+            <h3>1. Peso ambiental</h3>
+            <p>Cada ação tem um peso baseado em impacto real (CO₂ evitado, água economizada, lixo desviado de aterro).</p>
+          </article>
+          <article class="cartao" data-animate>
+            <div class="cartaoIcone"><i data-icon="calendar"></i></div>
+            <h3>2. Frequência</h3>
+            <p>Ações recorrentes valem mais que esforços isolados — o sistema premia consistência.</p>
+          </article>
+          <article class="cartao" data-animate>
+            <div class="cartaoIcone"><i data-icon="search"></i></div>
+            <h3>3. Validação</h3>
+            <p>Foto, geolocalização e timestamp validam cada ação, garantindo justiça no ranking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modalFundo" id="rewards-modal" role="dialog" aria-labelledby="rewards-title" aria-modal="true">
+    <div class="modal">
+      <button class="modalFechar" aria-label="Fechar">×</button>
+      <h3 id="rewards-title">Faixas de recompensa</h3>
+      <p style="margin:1rem 0;">Quanto mais pontos, mais benefícios. Cada faixa libera um novo nível de prêmios.</p>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem;">
+        <li style="padding:0.75rem; background:var(--color-bg); border-radius:8px;"><strong>0–19:</strong> Inativo · sem recompensa</li>
+        <li style="padding:0.75rem; background:var(--color-bg); border-radius:8px;"><strong>20–39:</strong> Iniciante · cupons básicos</li>
+        <li style="padding:0.75rem; background:var(--color-bg); border-radius:8px;"><strong>40–59:</strong> Ativo · descontos em marcas verdes</li>
+        <li style="padding:0.75rem; background:var(--color-bg); border-radius:8px;"><strong>60–79:</strong> Hero · vale-compra parceiros</li>
+        <li style="padding:0.75rem; background:linear-gradient(135deg,var(--color-mint),var(--color-teal)); color:white; border-radius:8px;"><strong>80–100:</strong> Champion · conta de energia subsidiada</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="rodapeSite">
+    <div class="conteiner">
+      <div class="rodapeGrid">
+        <div><img src="assets/logo-white.svg" alt="SoulUp" class="marcaImagem" /><p style="margin-top:0.75rem;">Gamificação sustentável que conecta atitudes ecológicas a recompensas reais.</p></div>
+        <div><h4>Páginas</h4><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="plataforma.html">Plataforma</a></li>
+        <li><a href="validar.html">Validar Ação</a></li><li><a href="ranking.html">Ranking</a></li></ul></div>
+        <div><h4>Equipe</h4><ul><li><a href="integrantes.html">Integrantes</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      </div>
+      <div class="rodapeBase">© <span id="current-year"></span> Challenge SoulUp · NextCode · Turma 1TDSPO</div>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/plataforma.js"></script>
+</body>
+</html>
