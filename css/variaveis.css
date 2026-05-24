@@ -1,0 +1,97 @@
+/* variáveis de design e estilos base globais */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-deep: #0b3a3e;
+  --color-ocean: #0f5c63;
+  --color-teal: #19c5b6;
+  --color-teal-dark: #14a99c;
+  --color-mint: #7fe7dc;
+  --color-lime: #c5d84a;
+  --color-lime-dark: #a8bc2e;
+  --color-bg: #f4faf9;
+  --color-surface: #ffffff;
+  --color-text: #0b3a3e;
+  --color-text-muted: #5e7274;
+  --color-border: #dde9e8;
+  --color-success: #19c5b6;
+  --color-error: #e25b4a;
+  --color-warning: #f0b429;
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 8px rgba(12, 35, 64, 0.06);
+  --shadow-md: 0 8px 24px rgba(12, 35, 64, 0.1);
+  --shadow-lg: 0 16px 40px rgba(12, 35, 64, 0.15);
+  --container: 1200px;
+  --header-h: 72px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-ocean);
+}
+
+/* ---------- 2. TIPOGRAFIA ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-deep);
+}
+h1 {
+  font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+}
+h2 {
+  font-size: clamp(1.6rem, 2.5vw + 0.8rem, 2.4rem);
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.15rem;
+}
+p {
+  color: var(--color-text-muted);
+}
+
