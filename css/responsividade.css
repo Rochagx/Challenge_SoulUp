@@ -1,0 +1,87 @@
+
+/* ---------- 19. RESPONSIVIDADE ---------- */
+@media (max-width: 992px) {
+  .destaqueGrid,
+  .contatoGrid,
+  .simulador,
+  .problemaSolucao,
+  .destaqueV2 .destaqueGrid,
+  .vitrine,
+  .validator-grid {
+    grid-template-columns: 1fr;
+  }
+  .rodapeGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pontuacaoPainel {
+    position: static;
+  }
+  .destaqueFoto {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 3rem;
+  }
+  .navegacaoBotao {
+    display: flex;
+  }
+  .navegacaoLinks {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: var(--space-md);
+    gap: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-md);
+  }
+  .navegacaoLinks.estaAberto {
+    transform: translateY(0);
+  }
+  .navegacaoLinks a {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .rodapeGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-lg: 2rem;
+    --space-xl: 2.5rem;
+  }
+  .conteiner {
+    padding: 0 var(--space-sm);
+  }
+  .destaqueAcoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .destaqueAcoes .botao {
+    width: 100%;
+  }
+  .rankingTabela {
+    font-size: 0.85rem;
+  }
+  .rankingTabela th,
+  .rankingTabela td {
+    padding: 0.6rem 0.4rem;
+  }
+  .pontuacaoValor {
+    font-size: 3rem;
+  }
+  .modal {
+    padding: var(--space-md);
+  }
+}
